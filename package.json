@@ -1,0 +1,40 @@
+{
+  "name": "api4ratsit.se",
+  "description": "API for Ratsit AB's www.ratsit.se",
+  "keywords": [
+    "ratsit",
+    "http",
+    "api"
+  ],
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andreineculau/ratsit.api.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "bin": {},
+  "scripts": {
+    "prepublish": "make prepublish",
+    "test": "make test"
+  },
+  "dependencies": {},
+  "optionalDependencies": {
+    "coffee-script": "~1.6.3"
+  },
+  "devDependencies": {
+    "chai": "~1.9.0",
+    "coffeelint": "~1.0.7",
+    "lodash": "~2.4.1",
+    "mocha": "~1.17.2",
+    "testem": "~0.6.7"
+  },
+  "publishConfig": {
+    "bin": {},
+    "optionalDependencies": {}
+  }
+}

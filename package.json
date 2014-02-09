@@ -38,7 +38,7 @@
     "chai": "~1.9.0",
     "coffeelint": "~1.0.7",
     "lodash": "~2.4.1",
-    "mocha": "~1.17.2",
+    "mocha": "~1.17.1",
     "testem": "~0.6.7"
   },
   "publishConfig": {

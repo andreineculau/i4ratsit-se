@@ -68,6 +68,7 @@ define [
         throw exports.makeError [err, res, body], next  if body.d.ErrorMessage?.length
         exports.makePersons body.d.PersonData, next
       catch err
+        throw err
         return exports.makeError [err, res, body], next
 
 
@@ -84,12 +85,20 @@ define [
 
   exports.makeAddress = (data, next) ->
     id = new Buffer(data.Url).toString 'base64'
-    [
-      street_address
-      street_name
-      street_number
-      street_extension
-    ] = /^(.+) +([0-9]+) +(.*)$/.exec data.Address # naïve
+    res = [ # naïve
+      /^(.+) +([0-9]+) +(.*)$/
+      /^(.+) +([0-9]+)$/
+    ]
+    for re in res
+      if re.test data.Address
+        [
+          street_address
+          street_name
+          street_number
+          street_extension
+        ] = re.exec data.Address
+        break
+    street_name = street_address  unless street_name
 
     address = {
       id

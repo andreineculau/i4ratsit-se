@@ -34,6 +34,7 @@ exports.main = (args = process.args) ->
 
 
 exports.personTpl = """
+--------------------------------------------------------------------------------
 ${ title } ${ given_name } ${ family_name.toUpperCase() }
 ${ date_of_birth }
 

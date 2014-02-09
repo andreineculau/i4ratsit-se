@@ -1,4 +1,4 @@
 prefix = './lib'
 prefix = './src'  if /.coffee$/.test module.filename
 
-module.exports = require "#{prefix}/index.coffee"
+module.exports = require "#{prefix}/index"

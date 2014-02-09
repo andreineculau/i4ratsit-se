@@ -17,7 +17,9 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   ],
-  "bin": {},
+  "bin": {
+    "i4ratsit-se": "bin/i4ratsit-se"
+  },
   "scripts": {
     "prepublish": "make prepublish",
     "test": "make test"

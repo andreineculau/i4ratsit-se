@@ -26,7 +26,8 @@ exports.main = (args = process.args) ->
 
   i4ratsitSe.search {who, where}, (err, res) ->
     throw err  if err?
-    throw JSON.stringify(res, null, 2)  unless res.headers['Content-Type'] is 'application/vnd.hyperrest.persons-v1+json'
+    unless res.headers['Content-Type'] is 'application/vnd.hyperrest.persons-v1+json'
+      throw JSON.stringify(res, null, 2)
     for person in res.body.items
       console.log _.template exports.personTpl, person
       for address in person.addresses

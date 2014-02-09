@@ -6,8 +6,8 @@ Interface for Ratsit AB's www.ratsit.se
 
 - provide a CLI
 - provide an "API" (HTTP server)
--- enacting proper HTTP usage
--- creating/using some vendor media-types (targeting a future media-type registration)
+  - enacting proper HTTP usage
+  - creating/using some vendor media-types (targeting a future media-type registration)
 
 
 ## Install

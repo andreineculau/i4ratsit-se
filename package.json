@@ -1,6 +1,6 @@
 {
-  "name": "api4ratsit.se",
-  "description": "API for Ratsit AB's www.ratsit.se",
+  "name": "i4ratsit-se",
+  "description": "Interface for Ratsit AB's www.ratsit.se",
   "keywords": [
     "ratsit",
     "http",
@@ -9,7 +9,7 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/andreineculau/ratsit.api.git"
+    "url": "git://github.com/andreineculau/i4ratsit-se.git"
   },
   "licenses": [
     {
@@ -22,7 +22,15 @@
     "prepublish": "make prepublish",
     "test": "make test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "request": "~2.33.0",
+    "async": "~0.2.10",
+    "lodash": "~2.4.1",
+    "know-your-http-well": "~0.1.5",
+    "amdefine": "~0.1.0",
+    "iconv": "~2.0.7",
+    "argparse": "~0.1.15"
+  },
   "optionalDependencies": {
     "coffee-script": "~1.6.3"
   },

@@ -19,6 +19,12 @@ parser.addArgument ['--where'],
   dest: 'where'
   help: 'Where are you looking for?'
 
+parser.addArgument ['--json'],
+  dest: 'asJSON'
+  help: 'Return data as JSON'
+  defaultValue: false
+  action: 'storeTrue'
+
 exports.main = (args = process.args) ->
   args = parser.parseArgs args
   {who, where} = args
@@ -28,6 +34,9 @@ exports.main = (args = process.args) ->
     throw err  if err?
     unless res.headers['Content-Type'] is 'application/vnd.hyperrest.persons-v1+json'
       throw JSON.stringify(res, null, 2)
+    if asJSON
+      console.log JSON.stringify res, null, 2
+      return
     for person in res.body.items
       console.log _.template exports.personTpl, person
       for address in person.addresses
